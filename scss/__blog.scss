@@ -48,3 +48,26 @@
     display: block;
     box-sizing: border-box;
 }
+
+@media (max-width:650px){
+    .blog{
+        &__items{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+@media (max-width:540px){
+    .blog{
+        padding-bottom: 50px;
+        &__item{
+            &-title{
+                margin-bottom: 10px;
+            }
+
+            &-link{
+                margin-left: auto;
+            }
+        }
+    }
+}

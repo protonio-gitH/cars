@@ -22,3 +22,34 @@
         }
     }
 }
+
+@media (max-width:1180px){
+    .important{
+        &__list{
+            gap: 30px 20px;
+        }
+
+        &__item{
+            &-img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:860px){
+    .important{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media (max-width:540px){
+    .important{
+        padding-bottom: 50px;
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

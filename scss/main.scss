@@ -43,6 +43,12 @@ body{
     text-align: center
 }
 
+@media (max-width:540px){
+    .section-title{
+        font-size: 34px;
+    }
+}
+
 @import './_header';
 @import './_footer';
 

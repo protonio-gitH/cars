@@ -17,6 +17,7 @@
     }
 
     &__link{
+        box-sizing: border-box;
         background-color: #151515;
         padding: 23px;
         max-width: 430px;
@@ -74,4 +75,44 @@
 .swiper-pagination-bullet-active{
     height: 6px;
     background-color: #fff;
+}
+
+@media (max-width:768px){
+    .top{
+        .title{
+            font-size: 70px;
+        }
+
+        &__link{
+            padding: 16px;
+            font-size: 28px;
+            max-width: 360px;
+        }
+    }
+    .swiper-pagination-bullet{
+        width: 60px;
+    }
+    .swiper-pagination-bullet-active{
+        height: 4px;
+    }
+
+}
+
+@media (max-width:540px){
+    .top{
+        .title{
+            font-size: 60px;
+        }
+
+        &__link{
+            font-size: 24px;
+            max-width: 310px;
+            
+        }
+    }
+
+    .swiper-pagination-bullet{
+        margin: 0 10px !important;
+        width: 35px;
+    }
 }

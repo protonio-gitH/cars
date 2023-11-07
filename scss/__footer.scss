@@ -40,3 +40,22 @@
         gap: 40px;
     }
 }
+
+@media (max-width:768px){
+    .footer{
+        &__menu{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .app,.copy__nav-list{
+            flex-direction: column;
+            align-items: center;
+        }
+        .copy__nav-list{
+            gap: 20px;
+        }
+    }
+}

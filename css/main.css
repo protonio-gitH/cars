@@ -39,6 +39,11 @@ body {
   text-align: center;
 }
 
+@media (max-width: 540px) {
+  .section-title {
+    font-size: 34px;
+  }
+}
 .header {
   background-color: #151515;
 }
@@ -56,6 +61,23 @@ body {
   left: 0;
   right: 0;
 }
+.header .menu__btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.header .menu__btn span {
+  height: 2px;
+  background-color: #fff;
+  width: 100%;
+}
 .header .menu__list {
   display: flex;
   gap: 35px;
@@ -69,6 +91,35 @@ body {
   color: #0066FF;
 }
 
+@media (max-width: 860px) {
+  .header .logo {
+    position: relative;
+    z-index: 10;
+  }
+  .header .menu__btn {
+    display: flex;
+    position: relative;
+    z-index: 10;
+  }
+  .header .menu__list {
+    position: absolute;
+    z-index: 5;
+    background-color: #151515;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 200px;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  .header .menu__list--active {
+    transform: translateY(0);
+  }
+}
 .footer {
   background-color: #151515;
   padding: 50px 0 32px;
@@ -107,6 +158,21 @@ body {
   gap: 40px;
 }
 
+@media (max-width: 768px) {
+  .footer__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  .footer .app, .footer .copy__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .copy__nav-list {
+    gap: 20px;
+  }
+}
 .top {
   color: #fff;
   text-align: center;
@@ -124,6 +190,7 @@ body {
   font-weight: 700;
 }
 .top__link {
+  box-sizing: border-box;
   background-color: #151515;
   padding: 23px;
   max-width: 430px;
@@ -170,6 +237,35 @@ body {
   background-color: #fff;
 }
 
+@media (max-width: 768px) {
+  .top .title {
+    font-size: 70px;
+  }
+  .top__link {
+    padding: 16px;
+    font-size: 28px;
+    max-width: 360px;
+  }
+  .swiper-pagination-bullet {
+    width: 60px;
+  }
+  .swiper-pagination-bullet-active {
+    height: 4px;
+  }
+}
+@media (max-width: 540px) {
+  .top .title {
+    font-size: 60px;
+  }
+  .top__link {
+    font-size: 24px;
+    max-width: 310px;
+  }
+  .swiper-pagination-bullet {
+    margin: 0 10px !important;
+    width: 35px;
+  }
+}
 .why-lease {
   padding: 150px 0;
 }
@@ -191,6 +287,20 @@ body {
   text-align: left;
 }
 
+@media (max-width: 860px) {
+  .why-lease__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .why-lease {
+    padding: 50px 0;
+  }
+  .why-lease__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .how-does {
   padding-bottom: 150px;
 }
@@ -237,6 +347,25 @@ body {
   margin-top: 40px;
 }
 
+@media (max-width: 540px) {
+  .how-does {
+    padding-bottom: 50px;
+  }
+  .how-does__list {
+    padding: 30px 0 40px;
+  }
+  .how-does__item {
+    padding: 65px 0 19px 0;
+    margin-right: auto;
+  }
+  .how-does__item::before {
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+  }
+}
 .video {
   padding-bottom: 150px;
 }
@@ -254,6 +383,20 @@ body {
   display: block;
 }
 
+@media (max-width: 1040px) {
+  .video__content {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media (max-width: 540px) {
+  .video {
+    padding-bottom: 50px;
+  }
+  .video__content {
+    height: 200px;
+  }
+}
 .important {
   padding-bottom: 150px;
 }
@@ -273,6 +416,27 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1180px) {
+  .important__list {
+    gap: 30px 20px;
+  }
+  .important__item-img {
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .important__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .important {
+    padding-bottom: 50px;
+  }
+  .important__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .contacts {
   padding: 100px 0 150px;
 }
@@ -337,8 +501,22 @@ body {
   line-height: 1.3;
   padding: 13px 61px;
   margin: 0 auto;
+  border: none;
 }
 
+@media (max-width: 650px) {
+  .contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contacts__text {
+    padding: 0;
+  }
+  .contacts .form__input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
 .blog {
   padding-bottom: 150px;
 }
@@ -380,6 +558,22 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 650px) {
+  .blog__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .blog {
+    padding-bottom: 50px;
+  }
+  .blog__item-title {
+    margin-bottom: 10px;
+  }
+  .blog__item-link {
+    margin-left: auto;
+  }
+}
 .choose-cars {
   padding: 100px 0 150px;
 }
@@ -423,6 +617,7 @@ body {
 }
 .choose-cars .card__img {
   display: block;
+  width: 100%;
 }
 .choose-cars .card__title {
   padding-top: 20px;
@@ -445,4 +640,58 @@ body {
 }
 .choose-cars .card__text {
   margin-bottom: 20px;
+}
+
+@media (max-width: 1180px) {
+  .choose-cars .tabs__content-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .choose-cars .card__content {
+    max-width: 354.4px;
+  }
+  .choose-cars .card__link {
+    max-width: 354.4px;
+  }
+}
+@media (max-width: 1040px) {
+  .choose-cars .tabs__btn {
+    padding: 0 0 50px;
+    gap: 20px;
+  }
+}
+@media (max-width: 860px) {
+  .choose-cars .tabs__content-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .choose-cars .card__content {
+    max-width: 391.6px;
+  }
+  .choose-cars .card__link {
+    max-width: 391.6px;
+  }
+}
+@media (max-width: 650px) {
+  .choose-cars .tabs__content-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .choose-cars .card__content {
+    max-width: 629.6px;
+  }
+  .choose-cars .card__link {
+    max-width: 629.6px;
+  }
+  .choose-cars .tabs__btn-item {
+    font-size: 18px;
+  }
+}
+@media (max-width: 540px) {
+  .choose-cars {
+    padding: 50px 0;
+  }
+  .choose-cars .tabs__btn {
+    flex-direction: column;
+  }
+  .choose-cars .tabs__content-item {
+    gap: 40px;
+  }
 }/*# sourceMappingURL=main.css.map */

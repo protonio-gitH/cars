@@ -54,6 +54,7 @@
 
         &__img{
             display: block;
+            width: 100%;
             
         }
         &__title{
@@ -84,5 +85,94 @@
         &__text{
             margin-bottom: 20px;
         }
+    }
+}
+
+@media (max-width:1180px){
+    .choose-cars{
+        .tabs__content{
+            &-item{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+
+        .card{
+            &__content{
+                max-width: 354.4px;
+            }
+
+            &__link{
+                max-width: 354.4px;
+            }
+        }
+    }
+}
+
+@media (max-width:1040px){
+    .choose-cars{
+        .tabs__btn{
+            padding: 0 0 50px;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width:860px){
+    .choose-cars{
+        .tabs__content{
+            &-item{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        .card{
+            &__content{
+                max-width: 391.6px;
+            }
+
+            &__link{
+                max-width: 391.6px;
+            }
+        }
+    }    
+}
+
+@media (max-width:650px){
+    .choose-cars{
+        .tabs__content{
+            &-item{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        .card{
+            &__content{
+                max-width: 629.6px;
+            }
+    
+            &__link{
+                max-width: 629.6px;
+            }
+        }
+        .tabs__btn{
+            &-item{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width:540px){
+    .choose-cars{
+        padding: 50px 0;
+        .tabs__btn{
+            flex-direction: column;
+        }
+
+        .tabs__content{
+            &-item{
+                gap: 40px;
+               
+            }
+        }    
     }
 }
