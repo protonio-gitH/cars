@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.section-title{
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center
+}
+
+@import './_header';
+@import './_footer';
+
+@import './_top';
+@import './_why-lease';
+@import './_how-does';
+@import './_video';
+@import './_important';
+
+
+@import './_contacts';
+@import './_blog';
+@import './_choose-car';

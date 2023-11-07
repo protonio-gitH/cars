@@ -1,0 +1,38 @@
+.header{
+    background-color: #151515;
+    &__inner{
+        padding-top:40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 45px;
+    }
+
+    &-main{
+        background-color: transparent;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        right: 0;
+    }
+
+
+    .menu{
+        &__list{
+            display: flex;
+            gap: 35px;
+
+            &-link{
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            &-link--active{
+                color: #0066FF;
+            }
+        }
+
+    }
+
+}
+
